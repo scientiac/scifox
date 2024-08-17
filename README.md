@@ -45,6 +45,6 @@ This userstyle has a keyboard centered usage:
 - Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) add on for a cleaner UI.
 
 ## 🎉 Credit
-* The simple design is heavily inspired by [simplefox](https://github.com/migueravila/SimpleFox). Additionally, this repository includes content reproduced or adapted from his userStyle.
+* The simple design is heavily inspired by [simplefox](https://github.com/migueravila/SimpleFox). Additionally, this repository includes content reproduced or adapted from their userStyle.
 * The single bar UI was inspired by [cascade](https://github.com/cascadefox/cascade).
 * The sidebar UI is possible due to [sidebery](https://github.com/mbnuqw/sidebery).
