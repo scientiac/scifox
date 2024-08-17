@@ -30,8 +30,6 @@ This userstyle has a keyboard centered usage:
 -   `Alt + Left Arrow` You can go Back
 -   `Alt + Right Arrow` You can go Forward
 -   `Ctrl + L` focuses the Navbar
--   `Ctrl + B` shows you the Bookmarks 
--   `Ctrl + H` shows you the History Bar
 -   `Ctrl + T` Opens a new Tab
 -   `Ctrl + W` Closes a Tab
 -   `Ctrl + Shift + T` Re-opens a tab that you just closed
