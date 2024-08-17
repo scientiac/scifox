@@ -1,0 +1,66 @@
+/*
+┏━╸┏━┓┏┓╻╺┳╸┏━┓
+┣╸ ┃ ┃┃┗┫ ┃ ┗━┓
+╹  ┗━┛╹ ╹ ╹ ┗━┛
+*/
+:root {
+  --main-font: "FantasqueSansM Nerd Font";
+}
+
+pre, code, samp, var
+{
+  font-family: var(--main-font) !important;
+}
+
+/*
+┏━┓┏━╸┏━┓┏━┓╻  ╻  ┏┓ ┏━┓┏━┓
+┗━┓┃  ┣┳┛┃ ┃┃  ┃  ┣┻┓┣━┫┣┳┛
+┗━┛┗━╸╹┗╸┗━┛┗━╸┗━╸┗━┛╹ ╹╹┗╸
+╻ ╻╻╺┳┓╺┳┓┏━╸┏┓╻
+┣━┫┃ ┃┃ ┃┃┣╸ ┃┗┫
+╹ ╹╹╺┻┛╺┻┛┗━╸╹ ╹
+*/
+
+:root {
+  scrollbar-width: none !important;
+}
+
+@-moz-document url(about:privatebrowsing) {
+  :root {
+    scrollbar-width: none !important;
+  }
+}
+
+/*
+╻ ╻┏━┓┏┳┓┏━╸┏━┓┏━┓┏━╸┏━╸
+┣━┫┃ ┃┃┃┃┣╸ ┣━┛┣━┫┃╺┓┣╸
+╹ ╹┗━┛╹ ╹┗━╸╹  ╹ ╹┗━┛┗━╸
+*/
+
+@-moz-document url("about:home"), url("about:newtab"){
+    .search-wrapper,
+    .top-site-outer .title{
+        font-family: var(--main-font) !important;
+    }
+
+    .top-site-outer .title{
+        font-size: 1rem !important;
+    }
+
+    .top-site-outer .top-site-inner > a {
+        padding: 10px 10px 4px !important;
+    }
+
+    .search-handoff-button {
+        background: #d8d8d81f !important;
+        border-radius: 5px !important;
+    }
+
+    .search-wrapper .logo-and-wordmark .logo,
+    .fake-textbox,
+    .top-site-outer .tile,
+    .icon.icon-pin-small {
+        display: none !important;
+    }
+
+}
