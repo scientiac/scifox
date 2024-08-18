@@ -44,6 +44,11 @@ This userstyle has a keyboard centered usage:
 - Remove and Organize (as you want) all the removable elements including extensions, drag space and buttons.
 - Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) add on for a cleaner UI.
 
+### Tips
+
+- In `about:config` set `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` to false to use the homepage search bar without jumping to the url bar.
+- In `Settings > Search > Search Shortcuts` untick everything to get a minimal look in search suggestions.
+
 ## 🎉 Credit
 * The simple design is heavily inspired by [simplefox](https://github.com/migueravila/SimpleFox). Additionally, this repository includes content reproduced or adapted from their userStyle.
 * The single bar UI was inspired by [cascade](https://github.com/cascadefox/cascade).
