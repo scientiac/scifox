@@ -51,11 +51,19 @@ pre, code, samp, var
         padding: 10px 10px 4px !important;
     }
 
-    .search-handoff-button {
+    .search-handoff-button, .search-wrapper input {
         background: #d8d8d81f !important;
         border-radius: 5px !important;
     }
 
+    #newtab-search-text::placeholder {
+        opacity: 0 !important;
+    }
+    :root[lwt-newtab-brighttext]{
+            --newtab-primary-action-background: transparent !important;
+    }
+
+    .search-wrapper .search-button,
     .search-wrapper .logo-and-wordmark .logo,
     .fake-textbox,
     .top-site-outer .tile,
