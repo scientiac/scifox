@@ -16,7 +16,7 @@
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
   --uc-sidebar-width: 38px !important;
   --uc-sidebar-hover-width: 250px;
-  --uc-autohide-sidebar-delay: 300ms; /* Wait 0.3s before hiding sidebar */
+  --uc-autohide-sidebar-delay: 600ms; /* Wait 0.3s before hiding sidebar */
   position: relative;
   min-width: var(--uc-sidebar-width) !important;
   width: var(--uc-sidebar-width) !important;
@@ -34,13 +34,51 @@
   will-change: min-width;
 }
  
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar {
   min-width: var(--uc-sidebar-hover-width) !important;
   transition-delay: 0ms !important
 }
  
 #sidebar-splitter {
     display: none;
+}
+
+/*
+┏━╸┏━┓┏┓╻╺┳╸┏━╸╻ ╻╺┳╸
+┃  ┃ ┃┃┗┫ ┃ ┣╸ ┏╋┛ ┃
+┗━╸┗━┛╹ ╹ ╹ ┗━╸╹ ╹ ╹
+┏┳┓┏━╸┏┓╻╻ ╻
+┃┃┃┣╸ ┃┗┫┃ ┃
+╹ ╹┗━╸╹ ╹┗━┛
+*/
+
+#toolbar-menubar menupopup,
+#toolbar-context-menu,
+#toolbar-context-menu menupopup,
+#unified-extensions-context-menu,
+#unified-extensions-context-menu menupopup,
+#placesContext, #placesContext menupopup,
+#downloadsContextMenu, #downloadsContextMenu menupopup,
+#sidebarMenu-popup, #PopupSearchAutoComplete,
+:is(#back-button, #forward-button) menupopup,
+#permission-popup-menulist menupopup,
+#contentAreaContextMenu[showservicesmenu="true"],
+#contentAreaContextMenu[showservicesmenu="true"] menupopup {
+  --panel-background: var(--arrowpanel-background) !important;
+  --panel-border-color: var(--toolbar-bgcolor) !important;
+  --toolbar-field-focus-background-color: var(--toolbarbutton-icon-fill) !important;
+  --panel-color: var(--toolbarbutton-icon-fill) !important;
+
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])), 
+  menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--panel-item-hover-bgcolor) !important;
+    color: var(--toolbarbutton-icon-fill) !important;
+  }
+  
+  menu:where([_moz-menuactive="true"][disabled="true"]), 
+  menuitem:where([_moz-menuactive="true"][disabled="true"]) {
+    background-color: transparent !important;
+  } 
 }
 
 /*
@@ -55,32 +93,32 @@
 ╹ ╹┗━╸╹ ╹┗━┛
  */
 
-#unified-extensions-view{
+#unified-extensions-view {
   --uei-icon-size: 16px;
 }
 
-.unified-extensions-item-menu-button.subviewbutton{
+.unified-extensions-item-menu-button.subviewbutton {
   padding: 0px !important;
   margin-inline-end: 0 !important;
 }
 
-.unified-extensions-item-action-button.subviewbutton{
+.unified-extensions-item-action-button.subviewbutton {
   padding-block: 6px !important;
 }
 
-.unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon{
+.unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon {
   padding: 4px !important;
 }
 
-.unified-extensions-item-message-deck{
+.unified-extensions-item-message-deck {
   display: none
 }
 
-#unified-extensions-view > vbox > vbox > .unified-extensions-item{
+#unified-extensions-view > vbox > vbox > .unified-extensions-item {
   padding-block: 0px !important;
 }
 
-#unified-extensions-panel .unified-extensions-item{
+#unified-extensions-panel .unified-extensions-item {
   margin-block: 0 !important;
 }
 
@@ -90,8 +128,7 @@
 ╹  ┗━┛╹ ╹ ╹ ┗━┛
 */
 
-*
-{
+* {
   font-family: "FantasqueSansM Nerd Font" !important;
   font-size: 16px !important;
 }
@@ -110,7 +147,7 @@
 }
 
 findbar {
-  --findbar-wdt: 945px;
+  --findbar-wdt: 975px;
   --margin: 1rem;
   --rounding: 5px;
 
@@ -128,10 +165,6 @@ findbar {
   width: var(--findbar-wdt);
 
   border-radius: var(--rounding) !important;
-  .findbar-closebutton {
-          display: none !important;
-  }
-  
 }
 
 /*
