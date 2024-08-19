@@ -9,38 +9,82 @@
 ┗━┓┃ ┃┃┣╸ ┣┻┓┣╸ ┣┳┛┗┳┛
 ┗━┛╹╺┻┛┗━╸┗━┛┗━╸╹┗╸ ╹
 */
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+#sidebar-box[sidebarcommand*="-sidebar-action"] #sidebar-header {
   visibility: collapse;
 }
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-  --uc-sidebar-width: 38px !important;
-  --uc-sidebar-hover-width: 250px;
-  --uc-autohide-sidebar-delay: 600ms; /* Wait 0.3s before hiding sidebar */
+
+#sidebar-box[sidebarcommand*="-sidebar-action"] {
+  --uc-sidebar-width: 10px !important;
+  --uc-sidebar-hover-width: 275px;
+  --uc-autohide-sidebar-delay: 1s;
   position: relative;
   min-width: var(--uc-sidebar-width) !important;
   width: var(--uc-sidebar-width) !important;
   max-width: var(--uc-sidebar-width) !important;
   z-index:1;
 }
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
-  display: none
+
+#sidebar-box[sidebarcommand*="-sidebar-action"] > #sidebar-splitter {
+  display: none;
 }
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar {
-  transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+
+#sidebar-box[sidebarcommand*="-sidebar-action"] > #sidebar {
+  transition: min-width 400ms linear var(--uc-autohide-sidebar-delay), 
+              opacity 400ms ease calc(var(--uc-autohide-sidebar-delay) + 100ms) !important;
   min-width: var(--uc-sidebar-width) !important;
-  will-change: min-width;
+  opacity: 0 !important;
+  will-change: min-width, opacity;
 }
- 
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar {
+
+#sidebar-box[sidebarcommand*="-sidebar-action"]:hover > #sidebar {
   min-width: var(--uc-sidebar-hover-width) !important;
-  transition-delay: 0ms !important
+  opacity: 1 !important;
+  transition-delay: 0s, 0s !important;
+}
+
+#sidebar-box[sidebarcommand*="-sidebar-action"]:hover > #sidebar {
+  min-width: var(--uc-sidebar-hover-width) !important;
+  opacity: 1 !important;
+  transition-delay: 0ms !important;
 }
  
 #sidebar-splitter {
     display: none;
+}
+
+#sidebar-box {
+  background: var(--lwt-accent-color) !important;;
+}
+
+/*
+┏━┓┏━┓╺┳┓╺┳┓╻┏┓╻┏━╸
+┣━┛┣━┫ ┃┃ ┃┃┃┃┗┫┃╺┓
+╹  ╹ ╹╺┻┛╺┻┛╹╹ ╹┗━┛
+┏━┓╻ ╻┏━┓┏━┓┏━┓╻ ╻┏┓╻╺┳┓
+┗━┓┃ ┃┣┳┛┣┳┛┃ ┃┃ ┃┃┗┫ ┃┃
+┗━┛┗━┛╹┗╸╹┗╸┗━┛┗━┛╹ ╹╺┻┛
+*/
+
+#appcontent .browserStack,
+#browser,
+.browserContainer {
+  background: var(--lwt-accent-color)
+}
+
+#browser > #appcontent {
+  --margin: 10px;
+  --rounding: 5px;
+  --outline: 1px solid var(--arrowpanel-background);
+
+  margin-left: 0px;
+  margin-right: var(--margin);
+  margin-top: 0px;
+  margin-bottom: var(--margin);
+  
+  browser {
+      border-radius: var(--rounding) !important;
+      border: var(--outline);
+  }
 }
 
 /*
@@ -134,58 +178,36 @@
 }
 
 /*
-╻ ╻┏━┓╻  ┏┓ ┏━┓┏━┓
-┃ ┃┣┳┛┃  ┣┻┓┣━┫┣┳┛
-┗━┛╹┗╸┗━╸┗━┛╹ ╹╹┗╸
-╻ ╻╻┏━╸╻ ╻
-┃┏┛┃┣╸ ┃╻┃
-┗┛ ╹┗━╸┗┻┛
-*/
-
-.urlbarView-row-inner, .urlbarView-no-wrap  {
-	align-items: center !important;
-}
-
-findbar {
-  --findbar-wdt: 975px;
-  --margin: 1rem;
-  --rounding: 5px;
-
-  position: fixed !important;
-  z-index: 5 !important;
-  bottom: var(--margin);
-
-  left: calc(
-    (
-      100vw
-      - var(--findbar-wdt)
-    ) / 2
-  );
-
-  width: var(--findbar-wdt);
-
-  border-radius: var(--rounding) !important;
-}
-
-/*
 ╻ ╻╻╺┳┓╺┳┓┏━╸┏┓╻
 ┣━┫┃ ┃┃ ┃┃┣╸ ┃┗┫
 ╹ ╹╹╺┻┛╺┻┛┗━╸╹ ╹
-╻ ╻┏━┓╻  ┏┓ ┏━┓┏━┓
-┃ ┃┣┳┛┃  ┣┻┓┣━┫┣┳┛
-┗━┛╹┗╸┗━╸┗━┛╹ ╹╹┗╸
+┏┓╻┏━┓╻ ╻┏┓ ┏━┓┏━┓
+┃┗┫┣━┫┃┏┛┣┻┓┣━┫┣┳┛
+╹ ╹╹ ╹┗┛ ┗━┛╹ ╹╹┗╸
 */
 
-#urlbar:not([customizing]) {
+#nav-bar:not([customizing]) {
   opacity: 0;
-  transition: transform 400ms ease 3s, opacity 400ms ease 3s !important;
+  min-height: 10px;
+  max-height: 10px;
+  transition: max-height 1s linear 3s, opacity 600ms ease 3s !important;
 }
 
-#urlbar:hover,
-#urlbar:focus-within {
+#nav-bar:hover,
+#nav-bar:focus-within {
   opacity: 1;
-  transition-duration: 500ms, 200ms !important;
-  transition-delay: 0s !important;
+  min-height: 10px;
+  max-height: 50px; 
+  transition-duration: 400ms, 1s !important;
+  transition-delay: 0s, 0s !important;
+}
+
+#urlbar:focus-within {
+  height: 100% !important;
+}
+
+.urlbarView {
+    background: var(--arrowpanel-background) !important;;
 }
 
 /* 
