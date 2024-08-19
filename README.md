@@ -1,5 +1,5 @@
 # ❄️ scifox
-A Minimalist Firefox userStyle
+An Immersive Firefox userStyle
 
 ## Screenshots
 
@@ -9,8 +9,8 @@ A Minimalist Firefox userStyle
 ![during-usage](images/while-using.png)
 #### Sidebar
 ![sidebar](images/sidebar.png)
-#### Adaptive Color
-![adaptive-colors](images/adaptive-colors.png)
+#### Navbar
+![navbar](images/navbar.png)
 
 ## ⚙️ Installation
 1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
