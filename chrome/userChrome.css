@@ -206,8 +206,13 @@
   height: 100% !important;
 }
 
+.urlbar-input-container {
+    height: 105% !important;
+}
+
 .urlbarView {
-    background: var(--arrowpanel-background) !important;;
+    background: var(--arrowpanel-background) !important;
+    border-radius: 5px;
 }
 
 /* 
