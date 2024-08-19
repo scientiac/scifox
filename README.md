@@ -5,6 +5,8 @@ A Minimalist Firefox userStyle
 
 #### Homepage
 ![homepage](images/homepage.png)
+#### During Usage
+![during-usage](images/during-usage.png)
 #### Sidebar
 ![sidebar](images/sidebar.png)
 #### Adaptive Color
