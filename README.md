@@ -24,7 +24,7 @@ A Minimalist Firefox userStyle
 6. Make all the customizations you want.
 7. Enjoy!
 
-> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as a preferred font (you might want to download it) but you can change it easily in the 'FONTS' section in `userChrome` and `userConfig` css files.
+> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as a preferred font (you might want to download it) but you can change it easily in the 'FONTS' section in `userChrome` and `userContent` css files.
 
 ## 🚀 Usage
 
