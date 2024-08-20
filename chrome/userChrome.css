@@ -65,25 +65,27 @@
 ┗━┛┗━┛╹┗╸╹┗╸┗━┛┗━┛╹ ╹╺┻┛
 */
 
-#appcontent .browserStack,
-#browser,
-.browserContainer {
-  background: var(--lwt-accent-color)
-}
+@media not all and (display-mode: fullscreen) {
+  #appcontent .browserStack,
+  #browser,
+  .browserContainer {
+    background: var(--lwt-accent-color)
+  }
 
-#browser > #appcontent {
-  --margin: 10px;
-  --rounding: 5px;
-  --outline: 1px solid var(--arrowpanel-background);
+  #browser > #appcontent {
+    --margin: 10px;  
+    --rounding: 5px;
+    --outline: 1px solid var(--arrowpanel-background);
 
-  margin-left: 0px;
-  margin-right: var(--margin);
-  margin-top: 0px;
-  margin-bottom: var(--margin);
+    margin-left: 0px;
+    margin-right: var(--margin);
+    margin-top: 0px;
+    margin-bottom: var(--margin);
   
-  browser {
+    browser {
       border-radius: var(--rounding) !important;
       border: var(--outline);
+    }
   }
 }
 
