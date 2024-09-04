@@ -186,7 +186,7 @@
   min-height: 10px;
   max-height: 50px; 
   transition-duration: 200ms !important;
-  transition-delay: 0s, 0s !important;
+  transition-delay: 0s, 200ms !important;
 }
 
 #urlbar:focus-within {
