@@ -15,6 +15,10 @@ An Immersive Firefox userStyle
 ## ⚙️ Installation
 1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
 2. Search for **`toolkit.legacyUserProfileCustomizations.stylesheets`**, **`layers.acceleration.force-enabled`**, **`gfx.webrender.all`**, and **`svg.context-properties.content.enabled`**. Change them to **True**
+
+> Set `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` to **false** to use the homepage search bar without jumping to the url bar.
+> Set `browser.startup.preXulSkeletonUI` to **false** to disable skeletonUI rendering during firefox launch.
+
 3. Go to your Firefox profile:
     - If you're on Linux: `$HOME/.mozilla/firefox/XXXXXXX.default-release/`
     - If you're on Windows: `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`
@@ -48,7 +52,6 @@ This userstyle has a keyboard centered usage:
 
 ### Tips
 
-- In `about:config` set `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` to false to use the homepage search bar without jumping to the url bar.
 - In `Settings > Search > Search Shortcuts` untick everything to get a minimal look in search suggestions.
 
 ## 🎉 Credit
