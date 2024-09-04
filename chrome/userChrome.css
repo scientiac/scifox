@@ -1,19 +1,19 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 /*
 ┏━╸┏━┓┏┓╻┏━╸╻┏━╸╻ ╻┏━┓┏━┓╺┳╸╻┏━┓┏┓╻
 ┃  ┃ ┃┃┗┫┣╸ ┃┃╺┓┃ ┃┣┳┛┣━┫ ┃ ┃┃ ┃┃┗┫
 ┗━╸┗━┛╹ ╹╹  ╹┗━┛┗━┛╹┗╸╹ ╹ ╹ ╹┗━┛╹ ╹
 */
+
 /*
 ┏━┓╻╺┳┓┏━╸┏┓ ┏━╸┏━┓╻ ╻
 ┗━┓┃ ┃┃┣╸ ┣┻┓┣╸ ┣┳┛┗┳┛
 ┗━┛╹╺┻┛┗━╸┗━┛┗━╸╹┗╸ ╹
 */
-#sidebar-box[sidebarcommand*="-sidebar-action"] #sidebar-header {
+#sidebar-box #sidebar-header {
   visibility: collapse;
 }
 
-#sidebar-box[sidebarcommand*="-sidebar-action"] {
+#sidebar-box {
   --uc-sidebar-width: 10px !important;
   --uc-sidebar-hover-width: 275px;
   --uc-autohide-sidebar-delay: 1s;
@@ -24,11 +24,7 @@
   z-index:1;
 }
 
-#sidebar-box[sidebarcommand*="-sidebar-action"] > #sidebar-splitter {
-  display: none;
-}
-
-#sidebar-box[sidebarcommand*="-sidebar-action"] > #sidebar {
+#sidebar-box > #sidebar {
   transition: min-width 400ms linear var(--uc-autohide-sidebar-delay), 
               opacity 400ms ease calc(var(--uc-autohide-sidebar-delay) + 100ms) !important;
   min-width: var(--uc-sidebar-width) !important;
@@ -36,24 +32,19 @@
   will-change: min-width, opacity;
 }
 
-#sidebar-box[sidebarcommand*="-sidebar-action"]:hover > #sidebar {
+#sidebar-box:hover > #sidebar {
   min-width: var(--uc-sidebar-hover-width) !important;
   opacity: 1 !important;
-  transition-delay: 0s, 0s !important;
+  transition-delay: 0s !important;
 }
 
-#sidebar-box[sidebarcommand*="-sidebar-action"]:hover > #sidebar {
-  min-width: var(--uc-sidebar-hover-width) !important;
-  opacity: 1 !important;
-  transition-delay: 0ms !important;
-}
- 
+#sidebar-box > #sidebar-splitter, 
 #sidebar-splitter {
     display: none;
 }
 
 #sidebar-box {
-  background: var(--lwt-accent-color) !important;;
+  background: var(--lwt-accent-color) !important;
 }
 
 /*
@@ -74,8 +65,6 @@
 
   #browser > #appcontent {
     --margin: 10px;  
-    --rounding: 5px;
-    --outline: 1px solid var(--arrowpanel-background);
 
     margin-left: 0px;
     margin-right: var(--margin);
@@ -83,7 +72,7 @@
     margin-bottom: var(--margin);
   
     browser {
-      border-radius: var(--rounding) !important;
+      --outline: 1px solid var(--arrowpanel-background);
       border: var(--outline);
     }
   }
@@ -139,33 +128,29 @@
 ╹ ╹┗━╸╹ ╹┗━┛
  */
 
-#unified-extensions-view {
-  --uei-icon-size: 16px;
-}
+#unified-extensions-view{
+    --uei-icon-size: 24px;
+    --extensions-in-row: 4;
 
-.unified-extensions-item-menu-button.subviewbutton {
-  padding: 0px !important;
-  margin-inline-end: 0 !important;
-}
+    width: 100% !important;
+    :is(
+      toolbarseparator,
+      .unified-extensions-item-menu-button.subviewbutton,
+      .unified-extensions-item-action-button .unified-extensions-item-contents
+    ) {display: none !important;}
 
-.unified-extensions-item-action-button.subviewbutton {
-  padding-block: 6px !important;
-}
-
-.unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon {
-  padding: 4px !important;
-}
-
-.unified-extensions-item-message-deck {
-  display: none
-}
-
-#unified-extensions-view > vbox > vbox > .unified-extensions-item {
-  padding-block: 0px !important;
-}
-
-#unified-extensions-panel .unified-extensions-item {
-  margin-block: 0 !important;
+    :is(
+      #overflowed-extensions-list,
+      #unified-extensions-area,
+      .unified-extensions-list 
+    ){
+      display: grid !important;
+      grid-template-columns: repeat(var(--extensions-in-row),auto);
+      justify-items: center !important;
+      align-items: center !important;
+    }
+    
+    .unified-extensions-item-action-button {padding-right: 3px !important;}
 }
 
 /*
@@ -200,7 +185,7 @@
   opacity: 1;
   min-height: 10px;
   max-height: 50px; 
-  transition-duration: 400ms, 1s !important;
+  transition-duration: 200ms !important;
   transition-delay: 0s, 0s !important;
 }
 
