@@ -28,7 +28,12 @@ An Immersive Firefox userStyle
 6. Make all the customizations you want.
 7. Enjoy!
 
-> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as a preferred font (you might want to download it) but you can change it easily in the 'FONTS' section in `userChrome` and `userConfig` css files.
+### Setting your desired font
+1. go to [about:config](about:config) and accept the risk.
+2. Set `font.default.x-western` to `monospace`.
+3. Set `font.name.monospace.x-western` to `<your desired font name>`
+
+> You can get the name of the font you like from `settings > general > fonts` where you can see the name of the fonts in the dropdown, just copy the name of the font you like from there and paste it to the cenfiguration stated by [3].
 
 ## 🚀 Usage
 
