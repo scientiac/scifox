@@ -35,6 +35,8 @@ An Immersive Firefox userStyle
 
 > You can get the name of the font you like from `settings > general > fonts` where you can see the name of the fonts in the dropdown, just copy the name of the font you like from there and paste it to the config stated by [3].
 
+> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as my preferred font.
+
 ## 🚀 Usage
 
 This userstyle has a keyboard centered usage:
