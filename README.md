@@ -33,7 +33,7 @@ An Immersive Firefox userStyle
 2. Set `font.default.x-western` to `monospace`.
 3. Set `font.name.monospace.x-western` to `<your desired font name>`
 
-> You can get the name of the font you like from `settings > general > fonts` where you can see the name of the fonts in the dropdown, just copy the name of the font you like from there and paste it to the cenfiguration stated by [3].
+> You can get the name of the font you like from `settings > general > fonts` where you can see the name of the fonts in the dropdown, just copy the name of the font you like from there and paste it to the config stated by [3].
 
 ## 🚀 Usage
 
