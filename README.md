@@ -62,6 +62,7 @@ This userstyle has a keyboard centered usage:
 ### Tips
 
 - In `Settings > Search > Search Shortcuts` untick everything to get a minimal look in search suggestions.
+- In firefox homepage settings disable everything except **Shortcuts** for a minimal layout.
 
 ## 🎉 Credit
 * The simple design is heavily inspired by [simplefox](https://github.com/migueravila/SimpleFox). Additionally, this repository includes content reproduced or adapted from their userStyle.
