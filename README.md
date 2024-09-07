@@ -2,6 +2,7 @@
 A Minimalist Firefox userStyle
 
 > ### I have switched to using a more immersive version of this config which is on the [immersive](https://github.com/scientiac/scifox/tree/immersive) branch.
+> You can clone it by: `git clone -b immersive https://github.com/scientiac/scifox`
 
 ## Screenshots
 
