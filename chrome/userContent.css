@@ -4,12 +4,7 @@
 ╹  ┗━┛╹ ╹ ╹ ┗━┛
 */
 :root {
-  --main-font: "FantasqueSansM Nerd Font";
-}
-
-pre, code, samp, var
-{
-  font-family: var(--main-font) !important;
+  --main-font: monospace;
 }
 
 /*
