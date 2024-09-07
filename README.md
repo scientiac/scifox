@@ -1,7 +1,7 @@
 # ❄️ scifox
 An Immersive Firefox userStyle
 
-You can clone this branch by: `git clone -b immersive https://github.com/scientiac/scifox`
+> You can clone this branch by: `git clone -b immersive https://github.com/scientiac/scifox`
 
 ## Screenshots
 
