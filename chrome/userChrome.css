@@ -21,7 +21,7 @@
   min-width: var(--uc-sidebar-width) !important;
   width: var(--uc-sidebar-width) !important;
   max-width: var(--uc-sidebar-width) !important;
-  z-index:1;
+  z-index:3;
 }
 
 #sidebar-box > #sidebar {
@@ -189,12 +189,28 @@
   transition-delay: 0s, 200ms !important;
 }
 
+#urlbar:not([customizing]) {
+  opacity: 0;
+  min-height: 10px;
+  max-height: 10px;
+  transition: max-height 1s linear 3s, opacity 600ms ease 3s !important;
+}
+
+#urlbar:hover,
 #urlbar:focus-within {
-  height: 100% !important;
+  opacity: 1;
+  min-height: 10px;
+  max-height: 50px; 
+  transition-duration: 200ms !important;
+  transition-delay: 0s, 200ms !important;
+}
+
+#urlbar:focus-within {
+  height: 0% !important;
 }
 
 .urlbar-input-container {
-    height: 105% !important;
+    height: 100% !important;
 }
 
 .urlbarView {
