@@ -177,14 +177,27 @@ findbar {
 
 #urlbar:not([customizing]) {
   opacity: 0;
-  transition: transform 400ms ease 3s, opacity 400ms ease 3s !important;
+  transition: max-height 1s linear 3s, opacity 600ms ease 3s !important;
 }
 
 #urlbar:hover,
 #urlbar:focus-within {
   opacity: 1;
-  transition-duration: 500ms, 200ms !important;
-  transition-delay: 0s !important;
+  transition-duration: 200ms !important;
+  transition-delay: 0s, 200ms !important;
+}
+
+#urlbar:focus-within {
+  height: 0% !important;
+}
+
+.urlbar-input-container {
+    height: 100% !important;
+}
+
+.urlbarView {
+    background: var(--arrowpanel-background) !important;
+    border-radius: 5px;
 }
 
 /* 
