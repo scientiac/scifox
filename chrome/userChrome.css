@@ -230,16 +230,13 @@ findbar {
   min-height: var(--urlbar-height) !important;
 }
 
-#urlbar {
-  top: 0 !important;
-}
-
 #urlbar[focused='true'] > #urlbar-background {
   box-shadow: none !important;
 }
 
 #navigator-toolbox {
   border: none !important;
+  padding: 4px !important;
 }
 
 /* Bookmarks bar  */
