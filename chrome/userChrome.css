@@ -184,7 +184,7 @@
 #nav-bar:focus-within {
   opacity: 1;
   min-height: 10px;
-  max-height: 50px; 
+  max-height: 50px;
   transition-duration: 200ms !important;
   transition-delay: 0s, 200ms !important;
 }
@@ -248,16 +248,13 @@
   min-height: var(--urlbar-height) !important;
 }
 
-#urlbar {
-  top: 0 !important;
-}
-
 #urlbar[focused='true'] > #urlbar-background {
   box-shadow: none !important;
 }
 
 #navigator-toolbox {
   border: none !important;
+  padding: 4px !important;
 }
 
 /* Bookmarks bar  */
