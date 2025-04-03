@@ -70,7 +70,7 @@
 
   menu:where([_moz-menuactive="true"]:not([disabled="true"])), 
   menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-    background-color: var(--lwt-accent-color) !important;
+    background-color: var(--arrowpanel-dimmed) !important;
     color: var(--toolbarbutton-icon-fill) !important;
   }
   
