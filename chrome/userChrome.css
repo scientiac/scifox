@@ -8,11 +8,11 @@
 ┗━┓┃ ┃┃┣╸ ┣┻┓┣╸ ┣┳┛┗┳┛
 ┗━┛╹╺┻┛┗━╸┗━┛┗━╸╹┗╸ ╹
 */
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+#sidebar-box #sidebar-header {
   visibility: collapse;
 }
  
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+#sidebar-box {
   --uc-sidebar-width: 38px !important;
   --uc-sidebar-hover-width: 250px;
   --uc-autohide-sidebar-delay: 600ms; /* Wait 0.3s before hiding sidebar */
@@ -23,19 +23,19 @@
   z-index:3;
 }
  
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-splitter {
+#sidebar-box > #sidebar-splitter {
   display: none
 }
  
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar {
+#sidebar-box {
   transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
   min-width: var(--uc-sidebar-width) !important;
   will-change: min-width;
 }
  
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover > #sidebar {
+#sidebar-box:hover {
   min-width: var(--uc-sidebar-hover-width) !important;
-  transition-delay: 0ms !important
+  transition-delay: 0ms !important;
 }
  
 #sidebar-splitter {
