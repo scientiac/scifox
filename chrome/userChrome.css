@@ -24,7 +24,7 @@
   z-index:3;
 }
 
-#sidebar-box > #sidebar {
+#sidebar-box {
   transition: min-width 400ms linear var(--uc-autohide-sidebar-delay), 
               opacity 400ms ease calc(var(--uc-autohide-sidebar-delay) + 100ms) !important;
   min-width: var(--uc-sidebar-width) !important;
@@ -32,7 +32,7 @@
   will-change: min-width, opacity;
 }
 
-#sidebar-box:hover > #sidebar {
+#sidebar-box:hover {
   min-width: var(--uc-sidebar-hover-width) !important;
   opacity: 1 !important;
   transition-delay: 0s !important;
