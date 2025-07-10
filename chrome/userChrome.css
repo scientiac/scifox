@@ -27,13 +27,13 @@
   display: none
 }
  
-#sidebar-box {
+#sidebar {
   transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
   min-width: var(--uc-sidebar-width) !important;
   will-change: min-width;
 }
  
-#sidebar-box:hover {
+#sidebar-box:hover > .sidebar-browser.stack > #sidebar {
   min-width: var(--uc-sidebar-hover-width) !important;
   transition-delay: 0ms !important;
 }
