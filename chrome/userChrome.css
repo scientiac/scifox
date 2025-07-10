@@ -33,7 +33,7 @@
   will-change: min-width;
 }
  
-#sidebar-box:hover > .sidebar-browser.stack > #sidebar {
+#sidebar:hover {
   min-width: var(--uc-sidebar-hover-width) !important;
   transition-delay: 0ms !important;
 }
