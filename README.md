@@ -16,6 +16,11 @@ A Minimalist Firefox userStyle
 ![adaptive-colors](images/adaptive-colors.png)
 
 ## ⚙️ Installation
+
+> [!IMPORTANT]
+> If you have not used other `user.js` or `chrome` files (a fresh Firefox install),
+> you can install the chrome using the installation script `./install.sh` but I recommend you to do it manually if you are using other `user.js` or `chrome` files.
+
 1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
 2. Search for **`toolkit.legacyUserProfileCustomizations.stylesheets`**, **`layers.acceleration.force-enabled`**, **`gfx.webrender.all`**, and **`svg.context-properties.content.enabled`**. Change them to **True**
 3. Go to your Firefox profile:
