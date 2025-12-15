@@ -1,8 +1,7 @@
 # ❄️ scifox
-A Minimalist Firefox userStyle
+An Immersive Firefox userStyle
 
-> ### I have switched to using a more immersive version of this config which is on the [immersive](https://github.com/scientiac/scifox/tree/immersive) branch.
-> You can clone it by: `git clone -b immersive https://github.com/scientiac/scifox`
+> You can clone this branch by: `git clone -b immersive https://github.com/scientiac/scifox`
 
 ## Screenshots
 
@@ -12,8 +11,8 @@ A Minimalist Firefox userStyle
 ![during-usage](images/while-using.png)
 #### Sidebar
 ![sidebar](images/sidebar.png)
-#### Adaptive Color
-![adaptive-colors](images/adaptive-colors.png)
+#### Navbar
+![navbar](images/navbar.png)
 
 ## ⚙️ Installation
 
@@ -23,6 +22,10 @@ A Minimalist Firefox userStyle
 
 1. In the searchbar type `about:config`. A dialog will be shown to you. Press the **I accept the risk** button.
 2. Search for **`toolkit.legacyUserProfileCustomizations.stylesheets`**, **`layers.acceleration.force-enabled`**, **`gfx.webrender.all`**, and **`svg.context-properties.content.enabled`**. Change them to **True**
+
+> Set `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` to **false** to use the homepage search bar without jumping to the url bar.
+> Set `browser.startup.preXulSkeletonUI` to **false** to disable skeletonUI rendering during firefox launch.
+
 3. Go to your Firefox profile:
     - If you're on Linux: `$HOME/.mozilla/firefox/XXXXXXX.default-release/`
     - If you're on Windows: `C:\Users\<USERNAME>\AppData\Roaming\Mozilla\Firefox\Profiles\XXXXXXX.default-XXXXXX`
@@ -32,7 +35,14 @@ A Minimalist Firefox userStyle
 6. Make all the customizations you want.
 7. Enjoy!
 
-> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as a preferred font (you might want to download it) but you can change it easily in the 'FONTS' section in `userChrome` and `userContent` css files.
+### Setting your desired font
+1. go to [about:config](about:config) and accept the risk.
+2. Set `font.default.x-western` to `monospace`.
+3. Set `font.name.monospace.x-western` to `<your desired font name>`
+
+> You can get the name of the font you like from `settings > general > fonts` where you can see the name of the fonts in the dropdown, just copy the name of the font you like from there and paste it to the config stated by [3].
+
+> I am using [FantasqueSansM Nerd Font](https://www.nerdfonts.com/font-downloads) in this configuration as my preferred font.
 
 ## 🚀 Usage
 
@@ -56,8 +66,8 @@ This userstyle has a keyboard centered usage:
 
 ### Tips
 
-- In `about:config` set `browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar` to false to use the homepage search bar without jumping to the url bar.
 - In `Settings > Search > Search Shortcuts` untick everything to get a minimal look in search suggestions.
+- In firefox homepage settings disable everything except **Shortcuts** for a minimal layout.
 
 ## 🎉 Credit
 * The simple design is heavily inspired by [simplefox](https://github.com/migueravila/SimpleFox). Additionally, this repository includes content reproduced or adapted from their userStyle.
